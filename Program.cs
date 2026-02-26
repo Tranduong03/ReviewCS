@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ReviewCS
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -31,23 +31,27 @@ namespace ReviewCS
             //name = " Tran";
             //Console.WriteLine("Value of name is: " + name);
 
+            Person person = new Person("Duong", 22, true);
+            var person1 = new Person("Duong", 22, true);
+
+            Console.WriteLine(person.ToString());
 
         }
     }
 
-    class Person
+    public class Person
     {
-        string name;
+        string name; 
         int age;
         bool sex;
 
-        Person()
+        public Person()
         {
             name = "Default";
             age = 0;
             sex = true;
         }
-        Person(string name, int age, bool sex)
+        public Person(string name, int age, bool sex)
         {
             this.name = name;
             this.age = age;
